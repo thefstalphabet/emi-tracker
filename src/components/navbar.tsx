@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X } from "lucide-react";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import logo from "../../public/logo.svg";
 import Image from "next/image";
@@ -31,7 +31,7 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  // const { user } = useUser();
+  const { user } = useUser();
   const pathname = usePathname();
 
   const authButtons = (
@@ -59,23 +59,25 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          {navItems.map((item, index) => {
-            return (
-              <Link
-                key={index}
-                href={item.url}
-                className={`text-sm font-medium hover:text-primary transition-colors ${
-                  pathname == item.url && "text-primary"
-                }`}
-              >
-                {item.title}
-              </Link>
-            );
-          })}
-        </div>
+        {!user && (
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.map((item, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={item.url}
+                  className={`text-sm font-medium hover:text-primary transition-colors ${
+                    pathname == item.url && "text-primary"
+                  }`}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
+          </div>
+        )}
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-5">
           <ThemeToggle />
           <SignedIn>
             <UserButton
@@ -99,14 +101,20 @@ export function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          {!user && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          )}
         </div>
       </div>
 
