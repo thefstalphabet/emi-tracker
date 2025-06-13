@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X } from "lucide-react";
 import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
@@ -54,7 +53,7 @@ export function Navbar() {
       <div className="flex justify-between h-[4.5rem] px-10">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src={logo} alt="logo" className="w-12 h-12" />
+            <Image src={logo} alt="logo" className="w-10 h-10" />
           </Link>
         </div>
 
@@ -78,7 +77,7 @@ export function Navbar() {
         )}
 
         <div className="flex items-center gap-5">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <SignedIn>
             <UserButton
               appearance={{

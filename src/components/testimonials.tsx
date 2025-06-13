@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Priya Sharma',
     role: 'Software Engineer',
     location: 'Bangalore',
-    content: 'EMI Tracker has been a game-changer for me. I used to struggle keeping track of 5 different EMIs. Now everything is organized and I never miss a payment!',
+    content: 'Installo has been a game-changer for me. I used to struggle keeping track of 5 different EMIs. Now everything is organized and I never miss a payment!',
     rating: 5,
     avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
   },

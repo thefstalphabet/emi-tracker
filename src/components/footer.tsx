@@ -14,7 +14,7 @@ export default function Footer() {
               {/* <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 p-2 rounded-lg">
                 <CreditCard className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">EMI Tracker</span> */}
+              <span className="text-xl font-bold gradient-text">Installo</span> */}
               <Image src={logo} alt="logo" className="w-12 h-12" />
             </div>
             
@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="border-t border-border py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-muted-foreground text-sm mb-4 md:mb-0">
-              © 2025 EMI Tracker. All rights reserved.
+              © 2025 Installo. All rights reserved.
             </div>
             
             <div className="flex space-x-6 text-sm">

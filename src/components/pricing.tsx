@@ -161,7 +161,7 @@ export default function Pricing() {
                 30-Day Money-Back Guarantee
               </h3>
               <p className="text-muted-foreground mb-6">
-                Try EMI Tracker risk-free. If you're not completely satisfied, we'll refund your money within 30 days.
+                Try Installo risk-free. If you're not completely satisfied, we'll refund your money within 30 days.
               </p>
               <div className="flex justify-center items-center space-x-8">
                 <div className="text-center">

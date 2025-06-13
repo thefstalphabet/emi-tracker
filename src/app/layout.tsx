@@ -7,9 +7,9 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EMI Tracker - Smart Loan Management for Everyone",
+  title: "Installo - Smart Loan Management for Everyone",
   description:
-    "Take control of your EMIs with EMI Tracker. Monitor monthly payouts, track remaining balances, and never miss a payment with smart alerts.",
+    "Take control of your EMIs with Installo. Monitor monthly payouts, track remaining balances, and never miss a payment with smart alerts.",
 };
 
 export default function RootLayout({
