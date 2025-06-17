@@ -11,7 +11,7 @@ import {
   Plus,
   Calculator,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 import Image from "next/image";
 import logo from "../../public/logo.svg";
 import { SignOutButton } from "@clerk/nextjs";
