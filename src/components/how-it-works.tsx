@@ -101,7 +101,7 @@ export default function HowItWorks() {
           <Card className="glass dark:glass-dark border-2 border-white/10 dark:border-white/5">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">
-                See EMI Tracker in Action
+                See Installo in Action
               </h3>
               <p className="text-muted-foreground mb-6">
                 Watch our 2-minute demo to see how easy it is to manage all your EMIs in one place.

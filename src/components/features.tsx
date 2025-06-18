@@ -116,7 +116,7 @@ export default function Features() {
                 Ready to Take Control of Your EMIs?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Join thousands of users who have simplified their loan management with EMI Tracker.
+                Join thousands of users who have simplified their loan management with Installo.
               </p>
               <Button variant="gradient" size="xl">
                 Start Your Free Trial
